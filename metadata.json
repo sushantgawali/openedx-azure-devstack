@@ -1,0 +1,7 @@
+{
+  "itemDisplayName": "Create an Open edX devstack instance",
+  "description": "This template creates an Ubuntu VM running Open edX devstack.",
+  "summary": "Deploy Open edX devstack to Azure.",
+  "githubUsername": "tkeemon",
+  "dateUpdated": "2015-09-28"
+}
