@@ -8,4 +8,26 @@ This is an Azure template to create an Ubuntu VM and provision the Open edX devs
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
+This template will complete quickly, but the full Open edX install usually takes > 1 hour. To follow along with the progress, ssh into the VM and `tail -f openedx-devstack-install.log`
 
+# Getting started with Open edX devstack
+After the initial provisioning has completed, ssh into your vm with:
+`ssh <ADMINUSERNAME>@<DNSNAMEFORPUBLICIP>.<RESOURCE_GROUP_LOCATION>.cloudapp.azure.com`
+
+and authenticate with the password specified in:
+`ADMINPASSWORD`
+
+From here, switch into the edxapp user:
+```
+sudo su edxapp -s /bin/bash
+source /edx/app/edxapp/edxapp_env
+```
+
+To get your server up and running navigate to the edx-platform directory:
+`cd /edx/app/edxapp/edx-platform`
+
+and use `paver` to help you start either the LMS (student facing site):
+`paver devstack lms`
+
+or Studio (the course authoring site):
+`paver devstack studio`
