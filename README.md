@@ -38,4 +38,6 @@ or Studio (the course authoring site):
 paver devstack studio
 ```
 
+After that, you can visit the sites by opening your browser and navigating to `<DNSNAMEFORPUBLICIP>.<RESOURCE_GROUP_LOCATION>.cloudapp.azure.com:8000` for the LMS and `<DNSNAMEFORPUBLICIP>.<RESOURCE_GROUP_LOCATION>.cloudapp.azure.com:8001` for Studio.
+
 For more info, check the [Open edX Github Wiki on devstack](https://github.com/edx/configuration/wiki/edX-Developer-Stack)
