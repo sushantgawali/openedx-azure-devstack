@@ -24,10 +24,18 @@ source /edx/app/edxapp/edxapp_env
 ```
 
 To get your server up and running navigate to the edx-platform directory:
-`cd /edx/app/edxapp/edx-platform`
+```
+cd /edx/app/edxapp/edx-platform
+````
 
 and use `paver` to help you start either the LMS (student facing site):
-`paver devstack lms`
+```
+paver devstack lms
+```
 
 or Studio (the course authoring site):
-`paver devstack studio`
+```
+paver devstack studio
+```
+
+For more info, check the [Open edX Github Wiki on devstack](https://github.com/edx/configuration/wiki/edX-Developer-Stack)
