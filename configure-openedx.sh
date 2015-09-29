@@ -89,7 +89,7 @@ cd playbooks/appsemblerPlaybooks
 
 curl https://raw.githubusercontent.com/tkeemon/openedx-azure-devstack/master/server-vars.yml > /tmp/server-vars.yml
 
-ansible-playbook -i localhost, -c local vagrant_devstack.yml -e@/tmp/server-vasr.yml
+sudo ansible-playbook -i localhost, -c local vagrant-devstack.yml -e@/tmp/server-vars.yml
 
 date
 echo "completed open edx devstack provision on pid $$"
