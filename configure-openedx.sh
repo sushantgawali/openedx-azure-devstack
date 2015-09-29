@@ -85,7 +85,7 @@ time git clone https://github.com/appsembler/configuration.git
 cd configuration
 time git checkout appsembler/azureDeploy
 time sudo pip install -r requirements.txt
-cd playbooks/appsemblerPlaybooks
+cd playbooks
 
 curl https://raw.githubusercontent.com/tkeemon/openedx-azure-devstack/master/server-vars.yml > /tmp/server-vars.yml
 
