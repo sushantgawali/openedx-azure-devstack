@@ -152,6 +152,34 @@
               "priority": 200,
               "direction": "Inbound"
             }
+          },
+          {
+            "name": "LMS",
+            "properties": {
+              "description": "Allow connection to Open edX LMS",
+              "protocol": "Tcp",
+              "sourcePortRange": "*",
+              "destinationPortRange": "8000",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 201,
+              "direction": "Inbound"
+            }
+          },
+          {
+            "name": "CMS",
+            "properties": {
+              "description": "Allow connection to Open edX CMS",
+              "protocol": "Tcp",
+              "sourcePortRange": "*",
+              "destinationPortRange": "8001",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 201,
+              "direction": "Inbound"
+            }
           }
         ]
       }
