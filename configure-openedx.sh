@@ -87,9 +87,7 @@ time git checkout appsembler/azureDeploy
 time sudo pip install -r requirements.txt
 cd playbooks
 
-curl https://raw.githubusercontent.com/tkeemon/openedx-azure-devstack/master/server-vars.yml > /tmp/server-vars.yml
-
-sudo ansible-playbook -i localhost, -c local vagrant-devstack.yml -e@/tmp/server-vars.yml
+sudo ansible-playbook -i localhost, -c local vagrant-devstack.yml 
 
 date
 echo "completed open edx devstack provision on pid $$"
