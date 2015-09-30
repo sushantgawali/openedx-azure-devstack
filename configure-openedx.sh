@@ -3,7 +3,7 @@
 # print commands and arguments as they are executed
 set -x
 
-echo "starting ubuntu devbox install on pid $$"
+echo "starting open edx devstack provision on pid $$"
 date
 ps axjf
 
@@ -75,6 +75,17 @@ time sudo apt-get install -y build-essential software-properties-common python-s
 time sudo pip install --upgrade pip
 time sudo pip install --upgrade virtualenv
 
+###################################################
+# Pin specific version of Open edX (named-release/cypress for now)
+###################################################
+export OPENEDX_RELEASE='named-release/cypress'
+EXTRA_VARS="-e edx_platform_version=$OPENEDX_RELEASE \
+  -e certs_version=$OPENEDX_RELEASE \
+  -e forum_version=$OPENEDX_RELEASE \
+  -e xqueue_version=$OPENEDX_RELEASE \
+  -e configuration_version=appsembler/azureDeploy \
+  -e edx_ansible_source_repo=https://github.com/appsembler/configuration \
+"
 
 ###################################################
 # Download configuration repo and start ansible
@@ -87,7 +98,7 @@ time git checkout appsembler/azureDeploy
 time sudo pip install -r requirements.txt
 cd playbooks
 
-sudo ansible-playbook -i localhost, -c local vagrant-devstack.yml 
+sudo ansible-playbook -i localhost, -c local vagrant-devstack.yml $EXTRA_VARS
 
 date
 echo "completed open edx devstack provision on pid $$"
