@@ -12,7 +12,7 @@ This template will complete quickly, but the full Open edX install usually takes
 
 # Getting started with Open edX devstack
 After the initial provisioning has completed, ssh into your vm with:
-`ssh <ADMINUSERNAME>@<DNSNAMEFORPUBLICIP>.<RESOURCE_GROUP_LOCATION>.cloudapp.azure.com`
+`ssh vagrant@YOUR_INSTANCES_DNS_NAME.cloudapp.azure.com`
 
 and authenticate with the password specified in:
 `ADMINPASSWORD`
@@ -38,6 +38,6 @@ or Studio (the course authoring site):
 paver devstack studio
 ```
 
-After that, you can visit the sites by opening your browser and navigating to `<DNSNAMEFORPUBLICIP>.<RESOURCE_GROUP_LOCATION>.cloudapp.azure.com:8000` for the LMS and `<DNSNAMEFORPUBLICIP>.<RESOURCE_GROUP_LOCATION>.cloudapp.azure.com:8001` for Studio.
+After that, you can visit the sites by opening your browser and navigating to `YOUR_INSTANCES_DNS_NAME.cloudapp.azure.com:8000` for the LMS and `YOUR_INSTANCES_DNS_NAME.cloudapp.azure.com:8001` for Studio.
 
 For more info, check the [Open edX Github Wiki on devstack](https://github.com/edx/configuration/wiki/edX-Developer-Stack)
