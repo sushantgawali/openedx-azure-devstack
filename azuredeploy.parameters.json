@@ -2,9 +2,6 @@
   "newStorageAccountName": {
     "value": "newopenedxstorage"
   },
-  "adminUsername": {
-    "value": "openedxuser"
-  },
   "adminPassword": {
     "value": "password1234$"
   },
