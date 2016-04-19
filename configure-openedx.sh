@@ -81,7 +81,7 @@ time sudo pip install --upgrade virtualenv
 ###################################################
 # Pin specific version of Open edX (named-release/cypress for now)
 ###################################################
-export OPENEDX_RELEASE='named-release/cypress'
+export OPENEDX_RELEASE='named-release/dogwood'
 EXTRA_VARS="-e edx_platform_version=$OPENEDX_RELEASE \
   -e certs_version=$OPENEDX_RELEASE \
   -e forum_version=$OPENEDX_RELEASE \
