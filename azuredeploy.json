@@ -48,7 +48,7 @@
     "osImageSKU" : "12.04.5-LTS",
     "publicIPAddressName": "myPublicIP",
     "publicIPAddressType": "Dynamic",
-    "customScriptLocation": "https://raw.githubusercontent.com/tkeemon/openedx-azure-devstack/master/",
+    "customScriptLocation": "https://raw.githubusercontent.com/sushantgawali/openedx-azure-devstack/master/",
     "wgetCommandPrefix": "[concat('wget --tries 20 --retry-connrefused --waitretry=15 -qO- ', variables('customScriptLocation'), 'configure-openedx.sh | nohup /bin/bash -s ')]",
     "wgetCommandPostfix":  " > /var/log/azure/openedx-devstack-install.log 2>&1 &'",
     "commandPrefix": "/bin/bash -c '",
